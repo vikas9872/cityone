@@ -1,0 +1,10 @@
+colors: {
+ 'text': '#050315',
+ 'background': '#fbfbfe',
+ 'primary': '#2f27ce',
+ 'secondary': '#dedcff',
+ 'accent': '#433bff',
+},
+
+
+<div> Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
