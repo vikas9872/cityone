@@ -45,19 +45,19 @@ const User = () => {
   }
 
   return (
-    <div className='h-full w-full flex flex-col items-center justify-center gap-10 p-4'>
-      <h1 className='font-extrabold text-4xl md:text-8xl'>{isLogin ? 'Log In' : 'Sign Up'}</h1>
-      <form className='w-full md:w-[50%] flex flex-col gap-4 p-4' onSubmit={isLogin ? login : register}>
+    <div className='h-full w-full flex flex-col items-center justify-center gap-10 p-4 bg-[url(/Images/formsbkgd.jpg)] bg-cover'>
+      <h1 className='font-extrabold text-4xl md:text-8xl text-white'>{isLogin ? 'Log In' : 'Sign Up'}</h1>
+      <form className='w-full md:w-[50%] flex flex-col gap-4 p-4 backdrop-blur-0 backdrop-saturate-200 bg-white/60 rounded-lg border border-gray-300/30 shadow-lg' onSubmit={isLogin ? login : register}>
         <div className='flex flex-col gap-2'>
-          <label className='text-lg'>Email</label>
+          <label className='text-lg text-black'>Email</label>
           <input type="email" className='border-2 p-2 outline-none' ref={emailRef} />
         </div>
         <div className='flex flex-col gap-2'>
-          <label className='text-lg'>Password</label>
+          <label className='text-lg text-black'>Password</label>
           <input type="password" className='border-2 p-2 outline-none' ref={passwordRef} />
         </div>
         <div className='flex items-center justify-center'>
-          <button type="submit" className='border-2 border-black p-2 w-full md:w-full cursor-pointer'>
+          <button type="submit" className='border-2 border-black p-2 w-full md:w-full cursor-pointer text-black'>
             {isLogin ? 'Log In' : 'Sign Up'}
           </button>
         </div>
@@ -65,7 +65,7 @@ const User = () => {
           <p>
             {isLogin ? "Don't have an account?" : 'Already have an account?'}
             <span
-              className='font-bold cursor-pointer hover:underline ml-1'
+              className='font-bold cursor-pointer hover:underline ml-1 text-black'
               onClick={() => setIsLogin(!isLogin)}
             >
               {isLogin ? 'Sign Up' : 'Log In'}
