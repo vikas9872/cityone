@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 const Employeeanduser = () => {
   const navigate=useNavigate();
   return (
-    <div className="flex items-center h-full bg-[url(/Images/employeeanduserbkgd.jpg)] bg-cover">
+    <div className="flex items-center h-full">
       <div className="flex flex-col md:flex-row w-full h-full justify-evenly">
         <button className="flex flex-col items-center justify-center cursor-pointer gap-2" onClick={()=>navigate("/manager")}>
           <img src="./Images/employee.png" className="h-[150px] md:h-[300px] w-[150px] md:w-[300px]" alt="user_icon" />

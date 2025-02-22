@@ -65,10 +65,11 @@ const Complaints = () => {
                     <label className='text-lg'>Issue:</label>
                     <select className='border-2 p-2 outline-none' ref={issueRef}>
                         <option>Garbage dumps</option>
-                        <option>Patholes</option>
+                        <option>Potholes</option>
                         <option>Garbage vehicle not arrived</option>
                         <option>Sweeping not done</option>
                         <option>No water supply</option>
+                        <option>Streetlights not working</option>
                     </select>
                 </div>
                 <div className='flex items-center justify-center'>

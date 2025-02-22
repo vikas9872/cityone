@@ -7,8 +7,8 @@ import ManagerDashboard from './Components/Dashboard/ManagerDashboard'
 import User from './Components/User/User'
 import Home from './Components/Home/Home'
 import Aboutus from './Components/AboutUs/Aboutus'
-import Mission from './Components/Mission/Mission'
 import Complaints from './Components/Complaints/Complaints'
+import Ourservices from './Components/Services/Ourservices'
 
 function App() {
 
@@ -25,7 +25,7 @@ function App() {
             <Route path='/complaints' element={<Complaints/>}/>
             <Route path='/' element={<Home/>}/>
             <Route path="/aboutus" element={<Aboutus/>}/>
-            <Route path="/ourmission" element={<Mission/>}/>
+            <Route path="/services" element={<Ourservices/>}/>
           </Routes>
         </div>
       </div>
