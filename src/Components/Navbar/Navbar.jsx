@@ -1,6 +1,9 @@
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { HiMiniBars3CenterLeft, HiXMark } from "react-icons/hi2";
 import { useNavigate } from 'react-router-dom';
+import { auth } from '../../firebase'
+import { signOut, onAuthStateChanged } from "firebase/auth";
+import { useEffect, useState } from 'react';
 
 const navigation = [
     { name: 'Home', path: '/', current: false },
@@ -14,6 +17,23 @@ function classNames(...classes) {
 
 export default function Navbar() {
     const navigate = useNavigate();
+    const [user, setUser] = useState(null);
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+        });
+        return () => unsubscribe();
+    }, []);
+
+    const handleLogout = async () => {
+        try {
+            await signOut(auth);
+            navigate('/');
+        } catch (error) {
+            console.error("Logout failed: ", error);
+        }
+    };
+
     return (
         <Disclosure as="nav" className="bg-white">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -40,9 +60,17 @@ export default function Navbar() {
                         <img src="/Images/cityone.png" className='h-[64px] w-[64px]' alt="logo" />
                     </div>
 
-                    {/* Right: Sign In Button */}
+                    {/* Right: Sign In / Log Out Button */}
                     <div className='flex flex-1 items-center justify-end'>
-                        <button onClick={() => navigate('/employeeanduser')} className='text-black cursor-pointer bg-[#dedcff] pt-4 pb-4 pr-8 pl-8'>Sign In</button>
+                        {user ? (
+                            <button onClick={handleLogout} className='text-black cursor-pointer bg-red-300 pt-4 pb-4 pr-8 pl-8'>
+                                Log Out
+                            </button>
+                        ) : (
+                            <button onClick={() => navigate('/employeeanduser')} className='text-black cursor-pointer bg-[#dedcff] pt-4 pb-4 pr-8 pl-8'>
+                                Sign In
+                            </button>
+                        )}
                     </div>
 
                     {/* Mobile Menu Button */}

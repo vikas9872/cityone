@@ -7,8 +7,9 @@ import { useNavigate } from 'react-router-dom';
 
 const User = () => {
   const [isLogin, setIsLogin] = useState(true)
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const emailRef = useRef(null)
+  const nameRef = useRef(null)
   const passwordRef = useRef(null)
 
   const register = async (event) => {
@@ -16,11 +17,13 @@ const User = () => {
     try {
       const email = emailRef.current.value
       const password = passwordRef.current.value
+      const name = nameRef.current.value
       const userCredential = await createUserWithEmailAndPassword(auth, email, password)
       const user = userCredential.user;
       await setDoc(doc(db, "users", user.uid), {
+        name: name,
         email: email,
-        role: 'user',
+        password: password
       });
       navigate("/complaints")
       console.log('user logged in:', user)
@@ -48,6 +51,12 @@ const User = () => {
     <div className='h-full w-full flex flex-col items-center justify-center gap-10 p-4 bg-[url(/Images/formsbkgd.jpg)] bg-cover'>
       <h1 className='font-extrabold text-4xl md:text-8xl text-white'>{isLogin ? 'Log In' : 'Sign Up'}</h1>
       <form className='w-full md:w-[50%] flex flex-col gap-4 p-4 backdrop-blur-0 backdrop-saturate-200 bg-white/60 rounded-lg border border-gray-300/30 shadow-lg' onSubmit={isLogin ? login : register}>
+        {!isLogin && (
+          <div className='flex flex-col gap-2'>
+            <label className='text-lg text-black'>Full Name</label>
+            <input type="text" className='border-2 p-2 outline-none' ref={nameRef} />
+          </div>
+        )}
         <div className='flex flex-col gap-2'>
           <label className='text-lg text-black'>Email</label>
           <input type="email" className='border-2 p-2 outline-none' ref={emailRef} />
