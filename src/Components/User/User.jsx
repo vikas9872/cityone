@@ -22,7 +22,7 @@ const User = () => {
         email: email,
         role: 'user',
       });
-      navigate("/userdashboard")
+      navigate("/complaints")
       console.log('user logged in:', user)
     } catch (error) {
       console.error('Error creating user:', error)
@@ -37,7 +37,7 @@ const User = () => {
       const password = passwordRef.current.value
       const userCredential = await signInWithEmailAndPassword(auth, email, password)
       console.log('user logged in:', userCredential.user)
-      navigate("/userdashboard")
+      navigate("/complaints")
     } catch (error) {
       console.error('Error logging in user:', error)
       alert(error.message)
