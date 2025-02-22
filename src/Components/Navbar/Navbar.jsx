@@ -29,6 +29,7 @@ export default function Navbar() {
         try {
             await signOut(auth);
             navigate('/');
+            console.log("User Logged Out")
         } catch (error) {
             console.error("Logout failed: ", error);
         }
