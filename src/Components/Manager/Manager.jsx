@@ -22,8 +22,8 @@ const Manager = () => {
   }
 
   return (
-    <div className='h-full w-full flex flex-col items-center justify-center gap-10 p-4 bg-[url(/Images/formsbkgd.jpg)] bg-cover'>
-      <h1 className='font-extrabold text-4xl text-white md:text-8xl'>Log In</h1>
+    <div className='h-full w-full flex flex-col items-center justify-center gap-10 p-4 bg-[url(/Images/formsBkgd.jpg)] bg-cover'>
+      <h1 className='font-extrabold text-4xl text-black md:text-8xl'>Log In</h1>
       <form className='w-full md:w-[50%] flex flex-col gap-4 p-4 backdrop-blur-0 backdrop-saturate-200 bg-white/60 rounded-lg border border-gray-300/30 shadow-lg'>
         <div className='flex flex-col gap-2'>
           <label className='text-lg'>Email</label>

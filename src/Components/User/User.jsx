@@ -48,8 +48,8 @@ const User = () => {
   }
 
   return (
-    <div className='h-full w-full flex flex-col items-center justify-center gap-10 p-4 bg-[url(/Images/formsbkgd.jpg)] bg-cover'>
-      <h1 className='font-extrabold text-4xl md:text-8xl text-white'>{isLogin ? 'Log In' : 'Sign Up'}</h1>
+    <div className='h-full w-full flex flex-col items-center justify-center gap-10 p-4 bg-[url(/Images/formsBkgd.jpg)] bg-cover'>
+      <h1 className='font-extrabold text-4xl md:text-8xl text-black'>{isLogin ? 'Log In' : 'Sign Up'}</h1>
       <form className='w-full md:w-[50%] flex flex-col gap-4 p-4 backdrop-blur-0 backdrop-saturate-200 bg-white/60 rounded-lg border border-gray-300/30 shadow-lg' onSubmit={isLogin ? login : register}>
         {!isLogin && (
           <div className='flex flex-col gap-2'>
