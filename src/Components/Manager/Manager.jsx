@@ -32,14 +32,14 @@ const Manager = () => {
       <form className='w-full md:w-[50%] flex flex-col gap-4 p-4 backdrop-blur-0 backdrop-saturate-200 bg-white/60 rounded-lg border border-gray-300/30 shadow-lg'>
         <div className='flex flex-col gap-2'>
           <label className='text-lg'>Email</label>
-          <input type="email" className='border-2 p-2 outline-none' ref={emailRef} />
+          <input type="email" className='border-2 p-2 outline-none rounded-xl' ref={emailRef} />
         </div>
         <div className='flex flex-col gap-2'>
           <label className='text-lg'>Password</label>
-          <input type="password" className='border-2 p-2 outline-none' ref={passwordRef} />
+          <input type="password" className='border-2 p-2 outline-none rounded-xl' ref={passwordRef} />
         </div>
         <div className='flex items-center justify-center'>
-          <button type="submit" className='border-2 border-black p-2 w-full md:w-full cursor-pointer hover:bg-black hover:text-white' onClick={login}>
+          <button type="submit" className='border-2 rounded-xl border-black p-2 w-full md:w-full cursor-pointer hover:bg-black hover:text-white' onClick={login}>
             Log In
           </button>
         </div>

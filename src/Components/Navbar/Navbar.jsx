@@ -68,7 +68,7 @@ export default function Navbar() {
                                 Log Out
                             </button>
                         ) : (
-                            <button onClick={() => navigate('/employeeanduser')} className='text-black cursor-pointer bg-[#dedcff] pt-4 pb-4 pr-8 pl-8'>
+                            <button onClick={() => navigate('/employeeanduser')} className='text-black rounded-xl cursor-pointer bg-[#dedcff] pt-4 pb-4 pr-8 pl-8'>
                                 Sign In
                             </button>
                         )}

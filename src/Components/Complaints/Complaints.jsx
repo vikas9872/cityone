@@ -70,24 +70,24 @@ const Complaints = () => {
                 <div className='flex flex-col md:flex-row  gap-2'>
                     <div className='flex flex-col gap-2 w-[100%]'>
                         <label className='text-sm text-black'>First Name</label>
-                        <input type="text" className='border-2 p-2 outline-none' required ref={firstnameRef} />
+                        <input type="text" className='border-2 p-2 outline-none rounded-xl' required ref={firstnameRef} />
                     </div>
                     <div className='flex flex-col gap-2 w-[100%]'>
                         <label className='text-sm text-black'>Last Name</label>
-                        <input type="text" className='border-2 p-2 outline-none' required ref={lastnameRef} />
+                        <input type="text" className='border-2 p-2 outline-none rounded-xl' required ref={lastnameRef} />
                     </div>
                 </div>
                 <div className='flex flex-col gap-2'>
                     <label className='text-sm text-black'>Address</label>
-                    <input type="text" className='border-2 p-2 outline-none' required ref={addressRef} />
+                    <input type="text" className='border-2 p-2 outline-none rounded-xl' required ref={addressRef} />
                 </div>
                 <div className='flex flex-col gap-2'>
                     <label className='text-sm text-black'>Phone Number</label>
-                    <input type="text" className='border-2 p-2 outline-none' required ref={phoneRef} />
+                    <input type="text" className='border-2 p-2 outline-none rounded-xl' required ref={phoneRef} />
                 </div>
                 <div className='flex flex-col gap-2'>
                     <label className='text-sm'>Complaint Category</label>
-                    <select className='border-2 p-2 outline-none' ref={issueRef}>
+                    <select className='border-2 p-2 outline-none rounded-xl' ref={issueRef}>
                         <option>Garbage dumps</option>
                         <option>Potholes</option>
                         <option>Garbage vehicle not arrived</option>
@@ -98,10 +98,10 @@ const Complaints = () => {
                 </div>
                 <div className='flex flex-col gap-2'>
                     <label className='text-sm text-black'>Complaint description</label>
-                    <textarea className="border-2 p-2 outline-none border-black" ref={complaintdescriptionRef} />
+                    <textarea className="border-2 p-2 outline-none border-black rounded-xl" ref={complaintdescriptionRef} />
                 </div>
                 <div className='flex items-center justify-center'>
-                    <button type="submit" className='border-2 border-black p-2 w-full md:w-full cursor-pointer text-black hover:bg-black hover:text-white'>
+                    <button type="submit" className='border-2 border-black rounded-xl p-2 w-full md:w-full cursor-pointer text-black hover:bg-black hover:text-white'>
                         Complaint!!
                     </button>
                 </div>

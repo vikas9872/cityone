@@ -61,19 +61,19 @@ const User = () => {
         {!isLogin && (
           <div className='flex flex-col gap-2'>
             <label className='text-lg text-black'>Full Name</label>
-            <input type="text" className='border-2 p-2 outline-none' ref={nameRef} />
+            <input type="text" className='border-2 p-2 outline-none rounded-xl' ref={nameRef} />
           </div>
         )}
         <div className='flex flex-col gap-2'>
           <label className='text-lg text-black'>Email</label>
-          <input type="email" className='border-2 p-2 outline-none' ref={emailRef} />
+          <input type="email" className='border-2 p-2 outline-none rounded-xl' ref={emailRef} />
         </div>
         <div className='flex flex-col gap-2'>
           <label className='text-lg text-black'>Password</label>
-          <input type="password" className='border-2 p-2 outline-none' ref={passwordRef} />
+          <input type="password" className='border-2 p-2 outline-none rounded-xl' ref={passwordRef} />
         </div>
         <div className='flex items-center justify-center'>
-          <button type="submit" className='border-2 border-black p-2 w-full md:w-full cursor-pointer text-black hover:bg-black hover:text-white'>
+          <button type="submit" className='border-2 rounded-xl border-black p-2 w-full md:w-full cursor-pointer text-black hover:bg-black hover:text-white'>
             {isLogin ? 'Log In' : 'Sign Up'}
           </button>
         </div>
